@@ -1,7 +1,8 @@
-'use client';
+"use client";
 import Hero from "@/components/Hero";
+import Events from "@/components/Events";
 import SlidingBg from "@/components/SlidingBg";
-import React from 'react';
+import React from "react";
 export default function Home() {
   return (
     /// Center a header file inside a div
@@ -9,10 +10,9 @@ export default function Home() {
       {/* <SlidingBg>
         
       </SlidingBg> */}
-      <Hero/>
-      <div className="h-[100vh]">
-        This is to test the overflow
-      </div>
+      <Hero />
+      <Events />
+      <div className="h-[100vh]">This is to test the overflow</div>
     </main>
   );
 }
