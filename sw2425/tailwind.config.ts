@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily:{
+        ppneue: ['PPNeueMontreal', 'sans-serif'], // Add the custom font
+      }
     },
   },
   plugins: [],

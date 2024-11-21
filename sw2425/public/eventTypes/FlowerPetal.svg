@@ -1,0 +1,31 @@
+<svg width="248" height="248" viewBox="0 0 248 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Vector">
+<path d="M124 62C124 96.2417 96.2417 124 62 124C27.7583 124 0 96.2417 0 62C0 27.7583 27.7583 0 62 0C96.2417 0 124 27.7583 124 62Z" fill="url(#paint0_radial_74_1826)"/>
+<path d="M248 62C248 96.2417 220.242 124 186 124C151.758 124 124 96.2417 124 62C124 27.7583 151.758 0 186 0C220.242 0 248 27.7583 248 62Z" fill="url(#paint1_radial_74_1826)"/>
+<path d="M248 186C248 220.242 220.242 248 186 248C151.758 248 124 220.242 124 186C124 151.758 151.758 124 186 124C220.242 124 248 151.758 248 186Z" fill="url(#paint2_radial_74_1826)"/>
+<path d="M124 186C124 220.242 96.2417 248 62 248C27.7583 248 0 220.242 0 186C0 151.758 27.7583 124 62 124C96.2417 124 124 151.758 124 186Z" fill="url(#paint3_radial_74_1826)"/>
+<path d="M186 124C186 158.242 158.242 186 124 186C89.7583 186 62 158.242 62 124C62 89.7583 89.7583 62 124 62C158.242 62 186 89.7583 186 124Z" fill="url(#paint4_radial_74_1826)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_74_1826" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(124 124) rotate(90) scale(124)">
+<stop stop-color="#FB73B6"/>
+<stop offset="1" stop-color="#F73C99"/>
+</radialGradient>
+<radialGradient id="paint1_radial_74_1826" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(124 124) rotate(90) scale(124)">
+<stop stop-color="#FB73B6"/>
+<stop offset="1" stop-color="#F73C99"/>
+</radialGradient>
+<radialGradient id="paint2_radial_74_1826" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(124 124) rotate(90) scale(124)">
+<stop stop-color="#FB73B6"/>
+<stop offset="1" stop-color="#F73C99"/>
+</radialGradient>
+<radialGradient id="paint3_radial_74_1826" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(124 124) rotate(90) scale(124)">
+<stop stop-color="#FB73B6"/>
+<stop offset="1" stop-color="#F73C99"/>
+</radialGradient>
+<radialGradient id="paint4_radial_74_1826" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(124 124) rotate(90) scale(124)">
+<stop stop-color="#FB73B6"/>
+<stop offset="1" stop-color="#F73C99"/>
+</radialGradient>
+</defs>
+</svg>
