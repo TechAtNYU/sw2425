@@ -42,9 +42,9 @@ const SlidingBg = ({ children }: { children?: React.ReactNode }) => {
 
     // Map the scroll progress to transform values
     const widthTransform = useTransform(scrollYProgress, [0, 1], [0, -window.innerWidth]); // Moves -100vw
-    const rotateTransform = useTransform(scrollYProgress, [0, 1], [360, 0]);
+    const rotateTransform = useTransform(scrollYProgress, [0, 1], [180+360, 180]);
     const leftWidthTransform = useTransform(scrollYProgress, [0, 1], [-window.innerWidth,0]); // Moves 100vw
-    const LeftrotateTransform = useTransform(scrollYProgress, [0, 1], [0,360]);
+    const LeftrotateTransform = useTransform(scrollYProgress, [0, 1], [180,180+360]);
     const uniformSVGClassLeft = 'w-[25%] h-[25%] left-0 md:w-[75%] md:h-[75%] py-3';
     const uniformSVGClassRight = 'w-[25%] h-[25%] right-0 md:w-[75%] md:h-[75%] py-3';
 
@@ -54,13 +54,15 @@ const SlidingBg = ({ children }: { children?: React.ReactNode }) => {
 
                 style={{ rotate: LeftrotateTransform, x: leftWidthTransform }}
                 ref={refLeft}
-                className="grid-flow-row absolute z-[500] left-[48vw] top-0 overflow-hidden select-none pointer-events-none"
+                className="grid-flow-row absolute z-[500] left-[50vw] top-[10vh] overflow-hidden select-none pointer-events-none"
             >
-                <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
+                {/* <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
                 <img src="/eventTypes/GreenCross.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
                 <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
                 <img src="/eventTypes/WhirlwindLogos.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
-                <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
+                
+                <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft} col-start-2 col-start-2 row-span-4`} alt="bg" /> */}
+                <img src="left side.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
             </motion.div>
 
             {children}
@@ -69,12 +71,9 @@ const SlidingBg = ({ children }: { children?: React.ReactNode }) => {
 
                 style={{ rotate: rotateTransform, x: widthTransform }}
                 ref={refRight}
-                className="flex-col absolute z-[500] right-[-48vw] top-0 overflow-hidden select-none pointer-events-none"
+                className="flex-col absolute z-[500] right-[-58vw] top-[10vh] overflow-hidden select-none pointer-events-none"
             >
-                <img src="/eventTypes/FlowerPetal.svg" className={uniformSVGClassRight} alt="bg" />
-                <img src="/eventTypes/GreenCross.svg" className={uniformSVGClassRight} alt="bg" />
-                <img src="/eventTypes/FlowerPetal.svg" className={uniformSVGClassRight} alt="bg" />
-                <img src="/eventTypes/WhirlwindLogos.svg" className={uniformSVGClassRight} alt="bg" />
+                <img src="right side.svg" className={`${uniformSVGClassRight}`} alt=""/>
             </motion.div>
         </div>
     );
