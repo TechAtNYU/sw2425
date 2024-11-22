@@ -1,4 +1,3 @@
-// Carousel.tsx
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -57,9 +56,20 @@ export const Carousel = () => {
 
   return (
     <div className="w-full py-20 z-50 relative">
-      <h2 className="text-center text-3xl font-bold mb-8">
-        Our Cards Carousel
-      </h2>
+      <div className="flex top-30 left-10 space-x-3 mb-8">
+        <button className="w-32 h-12 bg-gray-800 text-white rounded-3xl shadow-md">
+          Type 1
+        </button>
+        <button className="w-32 h-12 bg-gray-800 text-white rounded-3xl shadow-md">
+          Type 2
+        </button>
+        <button className="w-32 h-12 bg-gray-800 text-white rounded-3xl shadow-md">
+          Type 3
+        </button>
+        <button className="w-32 h-12 bg-gray-800 text-white rounded-3xl shadow-md">
+          Type 4
+        </button>
+      </div>
 
       <div className="relative">
         <div className="flex overflow-hidden">
