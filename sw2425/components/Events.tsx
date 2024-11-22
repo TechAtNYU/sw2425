@@ -15,7 +15,7 @@ const Events = () => {
         <p className="text-3xl">
           Tech@NYU’s Startup Week is one of NYU’s largest tech-fest events,
           becoming the founding event for the club. In the past, we have
-          partnered with.
+          partnered with. Add
         </p>
       </div>
     </section>
