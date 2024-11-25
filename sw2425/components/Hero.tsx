@@ -15,8 +15,16 @@ const Hero = () => {
             StartupWeek
           </h1>
           <div className="flex max-w-[60vw] text-gray-200 py-2 z-[5000]">
-            <p className="flex-grow basis-[65%] text-lg">
-              NYU’s Premier Student Entrepreneurship Event!
+            <p
+              className="flex-grow basis-[65%] text-lg"
+              style={{
+                color: "#FFFFFF",
+                fontSize: 20,
+                fontFamily: "PP Neue Montreal Thin",
+                fontWeight: ".1",
+              }}
+            >
+              NYU’s Premier Entrepreneurship Event!
             </p>
             <p className="flex-grow basis-[35%] text-lg px-5 ">
               March 3 - 10, 2025
