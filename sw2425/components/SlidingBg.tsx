@@ -62,16 +62,16 @@ const SlidingBg = ({ children }: { children?: React.ReactNode }) => {
     [180, 180 + 360]
   );
   const uniformSVGClassLeft =
-    "w-[25%] h-[25%] left-0 md:w-[75%] md:h-[75%] py-3";
+    "w-[75%] h-[75%] py-3";
   const uniformSVGClassRight =
-    "w-[25%] h-[25%] right-0 md:w-[75%] md:h-[75%] py-3";
+    "w-[75%] h-[75%] py-3";
 
   return (
     <div ref={containerRef} className="">
       <motion.div
         style={{ rotate: LeftrotateTransform, x: leftWidthTransform }}
         ref={refLeft}
-        className="grid-flow-row absolute z-[500] left-[50vw] top-[10vh] overflow-hidden select-none pointer-events-none"
+        className="grid-flow-row absolute z-[500] left-[50dvw] top-[10dvh] overflow-hidden select-none pointer-events-none"
       >
         {/* <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
                 <img src="/eventTypes/GreenCross.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
@@ -91,7 +91,7 @@ const SlidingBg = ({ children }: { children?: React.ReactNode }) => {
       <motion.div
         style={{ rotate: rotateTransform, x: widthTransform }}
         ref={refRight}
-        className="flex-col absolute z-[500] right-[-58vw] top-[10vh] overflow-hidden select-none pointer-events-none"
+        className="flex-col absolute z-[500] right-[-58dvw] top-[10dvh] overflow-hidden select-none pointer-events-none"
       >
         <img
           src="right side.svg"
