@@ -1,106 +1,50 @@
-"use client";
-import React, { useState, useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 
-const SlidingBg = ({ children }: { children?: React.ReactNode }) => {
-  const [height, setHeight] = useState(0);
-  const refLeft = useRef<HTMLDivElement>(null);
-  const refRight = useRef<HTMLDivElement>(null);
+const BackgroundSVGAnimation: React.FC = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Update the height from the boundaries of the ref
-    const updateHeight = () => {
-      if (refLeft.current) {
-        const rect = refLeft.current.getBoundingClientRect();
-        setHeight(rect.height);
-      }
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollY = window.scrollY;
+
+      const progress = scrollY / (documentHeight - windowHeight);
+
+      console.log("Scroll Progress:", progress);
+      setScrollProgress(progress);
     };
 
-    // Initial height calculation
-    updateHeight();
-
-    // Create a ResizeObserver to monitor the ref's size
-    const resizeObserver = new ResizeObserver(() => {
-      updateHeight();
-    });
-
-    if (refLeft.current) {
-      resizeObserver.observe(refLeft.current);
-    }
-
-    // Cleanup on unmount
-    return () => {
-      resizeObserver.disconnect();
-    };
-  }, [refLeft]);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 0", "end 100%"],
-  });
-
-  // Map the scroll progress to transform values
-  const widthTransform = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, -window.innerWidth]
-  ); // Moves -100vw
-  const rotateTransform = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [180 + 360, 180]
-  );
-  const leftWidthTransform = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [-window.innerWidth, 0]
-  ); // Moves 100vw
-  const LeftrotateTransform = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [180, 180 + 360]
-  );
-  const uniformSVGClassLeft =
-    "w-[75%] h-[75%] py-3";
-  const uniformSVGClassRight =
-    "w-[75%] h-[75%] py-3";
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div ref={containerRef} className="">
-      <motion.div
-        style={{ rotate: LeftrotateTransform, x: leftWidthTransform }}
-        ref={refLeft}
-        className="grid-flow-row absolute z-[500] left-[50dvw] top-[10dvh] overflow-hidden select-none pointer-events-none"
-      >
-        {/* <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
-                <img src="/eventTypes/GreenCross.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
-                <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
-                <img src="/eventTypes/WhirlwindLogos.svg" className={`${uniformSVGClassLeft}`} alt="bg" />
-                
-                <img src="/eventTypes/FlowerPetal.svg" className={`${uniformSVGClassLeft} col-start-2 col-start-2 row-span-4`} alt="bg" /> */}
-        <img
-          src="left side.svg"
-          className={`${uniformSVGClassLeft}`}
-          alt="bg"
-        />
-      </motion.div>
-
-      {children}
-
-      <motion.div
-        style={{ rotate: rotateTransform, x: widthTransform }}
-        ref={refRight}
-        className="flex-col absolute z-[500] right-[-58dvw] top-[10dvh] overflow-hidden select-none pointer-events-none"
-      >
-        <img
-          src="right side.svg"
-          className={`${uniformSVGClassRight}`}
-          alt=""
-        />
-      </motion.div>
+    <div
+      ref={containerRef}
+      className="fixed inset-0 z-[101] pointer-events-none overflow-hidden"
+    >
+      <img
+        src="/left_side.svg"
+        alt="Left side background"
+        className="absolute top-0 left-0 w-1/4 transition-all duration-2000 ease-out"
+        style={{
+          transform: `translateX(${-scrollProgress * 1000}%)`,
+          opacity: Math.max(0, 1 - scrollProgress * 2),
+        }}
+      />
+      <img
+        src="/right_side.svg"
+        alt="Right side background"
+        className="absolute top-0 right-0 w-1/4 transition-all duration-2000 ease-out"
+        style={{
+          transform: `translateX(${scrollProgress * 1000}%)`,
+          opacity: Math.max(0, 1 - scrollProgress * 2),
+        }}
+      />
     </div>
   );
 };
 
-export default SlidingBg;
+export default BackgroundSVGAnimation;

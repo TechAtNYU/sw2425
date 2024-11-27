@@ -14,10 +14,10 @@
 }
 
 @font-face {
-  font-family: 'PP Neue Montreal Book';
+  font-family: 'PP Neue Montreal Thin';
   font-style: normal;
   font-weight: normal;
-  src: local('PP Neue Montreal Book'), url('/fonts/ppneuemontreal-book.woff') format('woff');
+  src: local('PP Neue Montreal Thin'), url('/fonts/PPNeueMontreal-Thin.otf') format('opentype');
   }
 
 @media (prefers-color-scheme: dark) {

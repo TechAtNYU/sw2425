@@ -11,9 +11,7 @@ export default function Home() {
   return (
     /// Center a header file inside a div
     <main className="relative flex justify-center items-center flex-col overflow-hidden w-full">
-      {/* <SlidingBg>
-        
-      </SlidingBg> */}
+      <SlidingBg />
       <Hero />
       <Events />
       <Carousel />
