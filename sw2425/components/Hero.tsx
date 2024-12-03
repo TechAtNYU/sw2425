@@ -35,7 +35,9 @@ const Hero = () => {
             <button className="font-bold bg-gray-800 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition">
               Sign Up
             </button>
-            <p className="text-gray-200 underline cursor-pointer">Learn More</p>
+            <p className="text-gray-200 underline cursor-pointer">
+              Learn More blah blah blah
+            </p>
           </div>
         </div>
       </header>
