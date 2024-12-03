@@ -9,9 +9,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[#0F0F0F] z-0"></div>
       <SlidingBg />
       <BgTextComp text1="Startup" text2="Week" />
-      <header className="sm:max-w-[60vw] max-w-[100vw] justify-center inset-0 z-[5000]">
-        <div className="z-[5000] justify">
-          <h1 className="lg:text-8xl text-center text-6xl sm:text-6xl text-white font-bold font-ppnue z-[5000]">
+      <header className="sm:max-w-[60vw] max-w-[100vw] justify-center inset-0 z-[5000] pb-20">
+        <div className="z-[5000]">
+          <h1 className="lg:text-8xl text-center text-5xl sm:text-6xl text-white font-bold font-ppnue z-[5000]">
             StartupWeek
           </h1>
           <div className="flex max-w-[80vw] text-gray-200 py-2 z-[201] justify-center">
