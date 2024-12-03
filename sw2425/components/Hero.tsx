@@ -36,7 +36,7 @@ const Hero = () => {
               Sign Up
             </button>
             <p className="text-gray-200 underline cursor-pointer">
-              Learn More!
+              Learn More blah blah blah
             </p>
           </div>
         </div>
