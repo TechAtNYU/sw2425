@@ -38,5 +38,8 @@ def engage_csv_to_bin(engagefile, intended_attendance: int):
 
     return event_title, dataframe, actual_attendance, initial_RSVP
 
+def dataframe_to_db(dataframe):
+    # Dataframe will be processed
+    
 
 print(engage_csv_to_bin("linkedinSocial_Full_data.csv", 50))
