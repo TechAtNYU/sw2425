@@ -32,3 +32,32 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Base styles for text and container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 1.2rem; /* Default text size */
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.other-element {
+  flex: 1 1 200px;
+  min-width: 150px;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+/* Responsive styles when in mobile view */
+.text.mobile {
+  font-size: 1rem; /* Smaller font on mobile */
+}
+
+.other-element.mobile {
+  flex: 1 1 100%; /* Make it take full width on mobile */
+}

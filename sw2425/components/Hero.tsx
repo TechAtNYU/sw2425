@@ -14,9 +14,9 @@ const Hero = () => {
           <h1 className="lg:text-8xl text-center text-5xl sm:text-6xl text-white font-bold font-ppnue z-[5000]">
             StartupWeek
           </h1>
-          <div className="flex max-w-[60vw] text-gray-200 py-2 z-[5000]">
+          <div className="flex max-w-[80vw] text-gray-200 py-2 z-[201] justify-center">
             <p
-              className="flex-grow basis-[65%] text-lg"
+              className="flex-grow basis-[65%] md:text-lg text-sm justify-left"
               style={{
                 color: "#FFFFFF",
                 fontSize: 20,
@@ -26,8 +26,8 @@ const Hero = () => {
             >
               NYU’s Premier Entrepreneurship Event!
             </p>
-            <p className="flex-grow basis-[35%] text-lg px-5 ">
-              March 3 - 10, 2025
+            <p className="flex-grow basis-[35%] md:text-lg text-sm text-right justify-right">
+              March 3 to 10, 2025
             </p>
           </div>
 
@@ -35,7 +35,9 @@ const Hero = () => {
             <button className="font-bold bg-gray-800 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition">
               Sign Up
             </button>
-            <p className="text-gray-200 underline cursor-pointer">Learn More</p>
+            <p className="text-gray-200 underline cursor-pointer">
+              Learn More blah blah blah
+            </p>
           </div>
         </div>
       </header>
