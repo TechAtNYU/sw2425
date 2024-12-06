@@ -35,11 +35,14 @@ def engage_csv_to_bin(engagefile, intended_attendance: int):
     dataframe = pd.DataFrame(readable_buffer, columns=col_headers).drop(columns="Invitation Email")
     actual_attendance = dataframe[dataframe['Attendance Status'] == "Attended"]
     initial_RSVP = dataframe[dataframe["RSVP Status"] == "yes"]
-
-    return event_title, dataframe, actual_attendance, initial_RSVP
+    aggregate_df = dataframe[dataframe['Attendance Status'] == "Attended" or dataframe["RSVP Status"] == "yes"]
+    return event_title, dataframe, actual_attendance, initial_RSVP, aggregate_df
 
 def dataframe_to_db(dataframe):
     # Dataframe will be processed
-    
+    print("HELP")
+
+
+# Data Analysis, We don't know what the true intended attendance is
 
 print(engage_csv_to_bin("linkedinSocial_Full_data.csv", 50))
