@@ -50,17 +50,21 @@ const Events = () => {
 
   return (
     <section className="relative z-10 w-full h-[50%] flex flex-col">
-      <div className=" px-4 text-center md:text-left flex-row justify-center  items-center flex pt-10 ">
+      <div className=" px-4 text-center md:text-left flex-row justify-center w-full items-center flex pt-10 mt-5 ">
         <h2 className="text-2xl md:text-5xl font-extrabold text-white inline-block ">
           Events
         </h2>
-        <p className="text-lg md:text-3xl text-white px-20" >
+        <p className="text-lg md:text-3xl text-white pl-20" >
           Tech@NYU's Startup Week is one of NYU's largest tech-fest events,
-          becoming the founding event for the club. In the past, we have
-          partnered with.
+          becoming the founding event for the club.
+          <p className="invisible md:visible text-white">
+          In the past, we have
+          partnered with Ebay, YC, Berkeley Entrepreneurship Center, and other up and coming startups.
         </p>
+        </p>
+        
       </div>
-      <div className="w-full py-20">
+      <div className="w-full py-10">
         <Carousel items={items} />
       </div>
     </section>
