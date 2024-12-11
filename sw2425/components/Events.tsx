@@ -10,7 +10,7 @@ const Events = () => {
       key={1}
       index={0}
       card={{
-        src: "/carousel1.png",
+        src: "/eventTypes/DoubleSemi.svg",
         title: "Card 1",
         category: "Description 1",
         content: <p>This is the content for Card 1</p>,
@@ -20,7 +20,7 @@ const Events = () => {
       key={2}
       index={1}
       card={{
-        src: "/carousel2.png",
+        src: "/eventTypes/FlowerPetal.svg",
         title: "Card 2",
         category: "Description 2",
         content: <p>This is the content for Card 1</p>,
@@ -30,7 +30,7 @@ const Events = () => {
       key={3}
       index={2}
       card={{
-        src: "/carousel3.png",
+        src: "/eventTypes/GreenCross.svg",
         title: "Card 3",
         category: "Description 3",
         content: <p>This is the content for Card 1</p>,
@@ -40,7 +40,7 @@ const Events = () => {
       key={4}
       index={3}
       card={{
-        src: "/carousel4.png",
+        src: "/eventTypes/WhirlwindLogos.svg",
         title: "Card 3",
         category: "Description 4",
         content: <p>This is the content for Card 1</p>,
@@ -54,15 +54,12 @@ const Events = () => {
         <h2 className="text-2xl md:text-5xl font-extrabold text-white inline-block ">
           Events
         </h2>
-        <p className="text-lg md:text-3xl text-white pl-20" >
-          Tech@NYU's Startup Week is one of NYU's largest tech-fest events,
-          becoming the founding event for the club.
-          <p className="invisible md:visible text-white">
-          In the past, we have
-          partnered with Ebay, YC, Berkeley Entrepreneurship Center, and other up and coming startups.
+        <p className="text-lg md:text-3xl text-white pl-20">
+          Startup Week is one of NYU's largest tech-fest events It is Tech@NYU's
+          flagship conference, bringing industry experts with partners from with
+          eBay, YC, Berkeley Entrepreneurship Center, and other up and coming
+          startups.
         </p>
-        </p>
-        
       </div>
       <div className="w-full py-10">
         <Carousel items={items} />

@@ -5,7 +5,7 @@ import SlidingBg from "./SlidingBg";
 
 const Hero = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-black">
+    <div className="flex justify-center items-center h-screen bg-black ">
       <div className="absolute inset-0 bg-[#0F0F0F] z-0"></div>
       <SlidingBg />
       <BgTextComp text1="Startup" text2="Week" />
