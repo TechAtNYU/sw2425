@@ -5,7 +5,7 @@ import SlidingBg from "./SlidingBg";
 
 const Hero = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-black">
+    <div className="flex justify-center items-center h-screen bg-black ">
       <div className="absolute inset-0 bg-[#0F0F0F] z-0"></div>
       <SlidingBg />
       <BgTextComp text1="Startup" text2="Week" />
@@ -27,7 +27,7 @@ const Hero = () => {
               NYU’s Premier Entrepreneurship Event!
             </p>
             <p className="flex-grow basis-[35%] md:text-lg text-sm text-right justify-right">
-              March 3 to 10, 2025
+              March 1 to 7, 2025
             </p>
           </div>
 

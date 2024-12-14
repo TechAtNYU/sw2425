@@ -9,26 +9,44 @@ const BgTextComp = ({ text1, text2 }: textparts) => {
   return (
     <div>
       <div
-        className="z-[0] absolute top-[-15rem] left-[-10vw] select-none pointer-events-none"
-        style={{
-          color: "#1A1A1A",
-          fontSize: 560.88,
-          fontFamily: "LowDefTRIAL",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
+        className="
+          z-[0] 
+          absolute 
+          top-[-5rem] 
+          sm:top-[-8rem] 
+          md:top-[-10rem] 
+          lg:top-[-15rem] 
+          left-[-10vw] 
+          select-none 
+          pointer-events-none
+          text-[30px]      // Base size for mobile
+          sm:text-[300px]  // Small screens
+          md:text-[350px]  // Medium screens
+          lg:text-[560px]  // Large screens
+          text-[#1A1A1A]   // Using Tailwind color syntax
+          font-['LowDefTRIAL']  // Font family
+        "
       >
         {text1}
       </div>
       <div
-        className="z-[0] absolute top-[15rem] left-[10vw] select-none pointer-events-none"
-        style={{
-          color: "#1A1A1A",
-          fontSize: 560.88,
-          fontFamily: "LowDefTRIAL",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
+        className="
+          z-[0] 
+          absolute 
+          top-[5rem] 
+          sm:top-[8rem] 
+          md:top-[10rem] 
+          lg:top-[15rem] 
+          left-[10vw] 
+          select-none 
+          pointer-events-none
+          text-[300px]      // Base size for mobile
+          sm:text-[300px]  // Small screens
+          md:text-[350px]  // Medium screens
+          lg:text-[560px]  // Large screens
+          text-[#1A1A1A]   // Using Tailwind color syntax
+          font-['LowDefTRIAL']  // Font family
+        "
       >
         {text2}
       </div>

@@ -29,7 +29,7 @@ const BackgroundSVGAnimation: React.FC = () => {
       <img
         src="/left_side.svg"
         alt="Left side background"
-        className="absolute top-0 left-0 w-1/4 transition-all duration-2000 ease-out"
+        className="absolute top-[100px] md:top-0 left-[-5px] w-[0px] md:w-1/4 transition-all duration-2000 ease-out"
         style={{
           transform: `translateX(${-scrollProgress * 1000}%)`,
           opacity: Math.max(0, 1 - scrollProgress * 2),
@@ -38,7 +38,25 @@ const BackgroundSVGAnimation: React.FC = () => {
       <img
         src="/right_side.svg"
         alt="Right side background"
-        className="absolute top-0 right-0 w-1/4 transition-all duration-2000 ease-out"
+        className="absolute top-[100px] md:top-0 right-[-5px] w-[0px] md:w-1/4 transition-all duration-2000 ease-out"
+        style={{
+          transform: `translateX(${scrollProgress * 1000}%)`,
+          opacity: Math.max(0, 1 - scrollProgress * 2),
+        }}
+      />
+      <img
+        src="/left_mobile.svg"
+        alt="Left side mobile background"
+        className="absolute top-[200px] md:top-0 left-[-5px] w-[200px] md:w-[0px] transition-all duration-2000 ease-out"
+        style={{
+          transform: `translateX(${-scrollProgress * 1000}%)`,
+          opacity: Math.max(0, 1 - scrollProgress * 2),
+        }}
+      />
+      <img
+        src="/right_mobile.svg"
+        alt="Right side mobile background"
+        className="absolute top-[120px] md:top-0 right-[-5px] w-[100px] md:w-[0px] transition-all duration-2000 ease-out"
         style={{
           transform: `translateX(${scrollProgress * 1000}%)`,
           opacity: Math.max(0, 1 - scrollProgress * 2),
