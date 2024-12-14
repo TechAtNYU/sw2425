@@ -24,16 +24,10 @@
 
 import Hero from "@/components/Hero";
 import Events from "@/components/Events";
-<<<<<<< HEAD
-import Speaker from "@/components/Speaker";
-import SignUpForm from "@/components/SignUpForm";
-
-=======
 import { Carousel, Card } from "@/components/applestyleCarousel"; // Correct path to Carousel and Card
 import Speaker from "@/components/Speaker";
 import SignUpForm from "@/components/SignUpForm";
 import SlidingBg from "@/components/SlidingBg";
->>>>>>> 75bd68deab162cc761862de35a95cb3e23988933
 import React from "react";
 
 export default function Home() {
