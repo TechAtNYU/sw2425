@@ -46,6 +46,46 @@ const Events = () => {
         content: <p>This is the content for Card 1</p>,
       }}
     />,
+    <Card
+      key={5}
+      index={4}
+      card={{
+        src: "/eventTypes/WhirlwindLogos.svg",
+        title: "Card 3",
+        category: "Description 4",
+        content: <p>This is the content for Card 1</p>,
+      }}
+    />,
+    <Card
+      key={6}
+      index={5}
+      card={{
+        src: "/eventTypes/WhirlwindLogos.svg",
+        title: "Card 3",
+        category: "Description 4",
+        content: <p>This is the content for Card 1</p>,
+      }}
+    />,
+    <Card
+      key={7}
+      index={6}
+      card={{
+        src: "/eventTypes/WhirlwindLogos.svg",
+        title: "Card 3",
+        category: "Description 4",
+        content: <p>This is the content for Card 1</p>,
+      }}
+    />,
+    <Card
+      key={8}
+      index={7}
+      card={{
+        src: "/eventTypes/WhirlwindLogos.svg",
+        title: "Card 3",
+        category: "Description 4",
+        content: <p>This is the content for Card 1</p>,
+      }}
+    />,
   ];
 
   return (
@@ -61,7 +101,7 @@ const Events = () => {
           startups.
         </p>
       </div>
-      <div className="w-full py-10">
+      <div className="w-full py-10 min-h-[40vh]">
         <Carousel items={items} />
       </div>
     </section>
