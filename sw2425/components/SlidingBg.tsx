@@ -13,7 +13,7 @@ const BackgroundSVGAnimation: React.FC = () => {
 
       const progress = scrollY / (documentHeight - windowHeight);
 
-      console.log("Scroll Progress:", progress);
+      // console.log("Scroll Progress:", progress); NOT NEEDED IN PROD
       setScrollProgress(progress);
     };
 
